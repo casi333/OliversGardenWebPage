@@ -1,0 +1,26 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (para herramientas futuras)
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# Build / optimized
+dist/
+images/optimized/
+
+# Env
+.env
+.env.local
+
+# Logs
+*.log
