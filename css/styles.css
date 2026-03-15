@@ -121,13 +121,14 @@ nav.scrolled {
 }
 
 .nav-logo img {
-  height: 176px;
+  height: 360px;
   width: auto;
   filter: brightness(0) invert(1);
-  transition: filter var(--transicion);
+  transition: filter var(--transicion), height var(--transicion);
 }
 
 nav.scrolled .nav-logo img {
+  height: 80px;
   filter: none;
 }
 
