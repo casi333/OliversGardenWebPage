@@ -121,7 +121,7 @@ nav.scrolled {
 }
 
 .nav-logo img {
-  height: 44px;
+  height: 176px;
   width: auto;
   filter: brightness(0) invert(1);
   transition: filter var(--transicion);
