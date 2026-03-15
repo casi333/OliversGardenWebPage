@@ -581,8 +581,8 @@ section {
 
 .amenidades-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -590,66 +590,59 @@ section {
 .amenidad-card {
   background: var(--crema);
   border-radius: var(--radio);
-  padding: 36px 24px 30px;
-  text-align: center;
+  padding: 28px 24px;
   border: 1px solid var(--arena);
-  transition: transform var(--transicion), box-shadow var(--transicion);
-  position: relative;
-  overflow: hidden;
-}
-
-.amenidad-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--oliva-oscuro), var(--dorado));
-  transform: scaleX(0);
-  transition: transform 0.4s ease;
+  transition: transform var(--transicion), box-shadow var(--transicion), border-color var(--transicion);
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  text-align: left;
 }
 
 .amenidad-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
   box-shadow: var(--sombra-media);
-}
-
-.amenidad-card:hover::before {
-  transform: scaleX(1);
+  border-color: var(--dorado);
 }
 
 .amenidad-icono {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
   background: linear-gradient(135deg, var(--oliva-oscuro), var(--oliva-medio));
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 18px;
+  flex-shrink: 0;
 }
 
 .amenidad-icono svg {
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
   stroke: #fff;
   fill: none;
   stroke-width: 1.5;
+}
+
+.amenidad-texto {
+  flex: 1;
+  min-width: 0;
 }
 
 .amenidad-card h3 {
   font-size: 15px;
   font-weight: 600;
   color: var(--oliva-oscuro);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  line-height: 1.3;
 }
 
 .amenidad-card p {
   font-size: 13px;
   color: var(--texto-suave);
-  line-height: 1.65;
+  line-height: 1.6;
   font-weight: 400;
+  margin: 0;
 }
 
 /* ─── CTA WHATSAPP ─── */
