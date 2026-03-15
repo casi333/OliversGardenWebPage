@@ -511,9 +511,9 @@ section {
 
 .galeria-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  grid-template-rows: 280px 280px;
-  gap: 12px;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-rows: 260px 220px;
+  gap: 10px;
   max-width: 1100px;
   margin: 0 auto;
   border-radius: var(--radio-lg);
@@ -526,7 +526,7 @@ section {
   cursor: pointer;
 }
 
-.galeria-item:first-child {
+.galeria-tall {
   grid-row: span 2;
 }
 
@@ -918,4 +918,185 @@ footer {
   stroke: #fff;
   fill: none;
   stroke-width: 1.8;
+}
+
+/* ─── TESTIMONIOS ─── */
+.testimonios {
+  background: var(--arena);
+  text-align: center;
+}
+
+.testimonios-header {
+  max-width: 600px;
+  margin: 0 auto 52px;
+}
+
+.testimonios-header .divisor {
+  margin: 20px auto 0;
+}
+
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.testimonio-card {
+  background: var(--blanco);
+  border-radius: var(--radio);
+  padding: 32px 28px;
+  text-align: left;
+  border: 1px solid rgba(232, 223, 199, 0.6);
+  box-shadow: var(--sombra-suave);
+  position: relative;
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.testimonio-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-media);
+}
+
+.testimonio-destacado {
+  background: var(--oliva-oscuro);
+  border-color: transparent;
+  transform: translateY(-8px);
+}
+
+.testimonio-destacado:hover {
+  transform: translateY(-12px);
+}
+
+.testimonio-badge {
+  position: absolute;
+  top: -14px;
+  left: 28px;
+  background: var(--dorado);
+  color: var(--oliva-oscuro);
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 50px;
+  letter-spacing: 0.5px;
+}
+
+.testimonio-estrellas {
+  color: var(--dorado);
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.testimonio-destacado .testimonio-estrellas {
+  color: var(--dorado-claro);
+}
+
+.testimonio-texto {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--texto-suave);
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.testimonio-destacado .testimonio-texto {
+  color: rgba(255,255,255,0.75);
+}
+
+.testimonio-autor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.autor-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--oliva-medio);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.testimonio-destacado .autor-avatar {
+  background: var(--dorado);
+  color: var(--oliva-oscuro);
+}
+
+.autor-nombre {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--texto-oscuro);
+  margin-bottom: 3px;
+}
+
+.testimonio-destacado .autor-nombre {
+  color: #fff;
+}
+
+.autor-fuente {
+  font-size: 11px;
+  color: var(--texto-suave);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.testimonio-destacado .autor-fuente {
+  color: rgba(255,255,255,0.55);
+}
+
+/* ─── BOTÓN FLOTANTE WHATSAPP ─── */
+.wa-flotante {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+  transition: transform var(--transicion), box-shadow var(--transicion), padding var(--transicion);
+  text-decoration: none;
+  max-width: 220px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.wa-flotante:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 32px rgba(37, 211, 102, 0.55);
+}
+
+.wa-flotante-texto {
+  font-size: 14px;
+  font-weight: 600;
+  transition: opacity 0.3s, max-width 0.3s;
+}
+
+/* En mobile se colapsa a solo el ícono */
+@media (max-width: 500px) {
+  .wa-flotante {
+    padding: 16px;
+    border-radius: 50%;
+    max-width: 56px;
+  }
+  .wa-flotante-texto {
+    display: none;
+  }
 }

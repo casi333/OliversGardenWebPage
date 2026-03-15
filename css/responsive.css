@@ -92,12 +92,27 @@
 
   /* Galería */
   .galeria-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: 260px 200px 200px 200px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 220px 200px 200px;
   }
 
-  .galeria-item:first-child {
+  .galeria-tall {
     grid-row: span 1;
+    grid-column: span 2;
+  }
+
+  /* Testimonios */
+  .testimonios-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .testimonio-destacado {
+    transform: none;
+  }
+
+  .testimonio-destacado:hover {
+    transform: translateY(-4px);
   }
 
   /* Amenidades */
@@ -180,7 +195,12 @@
   }
 
   .galeria-grid {
-    grid-template-rows: 220px 180px 180px 180px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 220px 180px 180px 180px 180px;
+  }
+
+  .galeria-tall {
+    grid-column: span 1;
   }
 }
 
